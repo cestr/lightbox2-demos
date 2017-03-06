@@ -36,7 +36,21 @@
     </section>
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="../node_modules/lightbox2/dist/js/lightbox.js"></script>
+    <script>
+        $(function () {
+            
+            $('[data-lightbox]').click(function(e){
+                console.log("slickParse");
+            });
+            $("#lightbox,#lightboxOverlay,.lb-close").click(function(e){
+                if (e.target.className === "lightbox" || e.target.className === "lb-close") {
+                console.log("slickPlay");
+                }
+                console.log(e.target.className);
+            });
+        });
+    </script>
 </body>
 
 </html>
